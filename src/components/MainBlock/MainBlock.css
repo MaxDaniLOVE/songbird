@@ -1,0 +1,39 @@
+.main-block-container{
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.75);
+  border-radius: 8px;
+}
+.bird-list{
+  width: 30%;
+}
+.right{
+  background-color: #56CC9D ;
+  color: #fff;
+}
+.wrong{
+  background-color: #F3969A;
+  color: #fff;
+}
+.bird-list-item:nth-child(1){
+  border-top-right-radius: 0;
+}
+.bird-list-item:nth-child(5){
+  border-bottom-right-radius: 0;
+}
+.bird-card{
+  width: 70%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: 0;
+  margin-bottom: 0 !important;
+}
+.next-btn{
+  margin-top: 2rem;
+  width: 100%;
+}
+.card-container{height: 100%;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+}

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from '../Header'
 import TopPanel from '../TopPanel';
 import GuessBirdBlock from '../GuessBirdBlock';
+import MainBlock from '../MainBlock';
 import './App.css';
 
 export default class App extends Component{
@@ -15,6 +16,7 @@ export default class App extends Component{
         <Header score={score}/>
         <TopPanel />
         <GuessBirdBlock />
+        <MainBlock />
       </div>
     );
   }
