@@ -1,0 +1,4 @@
+.guessing-bird-block{
+  display: flex;
+  flex-direction: row;
+}
