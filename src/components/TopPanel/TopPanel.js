@@ -8,20 +8,20 @@ const TopPanel = () => {
         <li className="page-item active">
           <span className="page-link" href="#">Разминка</span>
         </li>
-        <li className="page-item">
-          <span className="page-link" href="#">Воробьиные</span>
+        <li className="page-item disabled">
+          <span className="page-link " href="#">Воробьиные</span>
         </li>
-        <li className="page-item">
-          <span className="page-link" href="#">Лесные птицы</span>
+        <li className="page-item disabled">
+          <span className="page-link " href="#">Лесные птицы</span>
         </li>
-        <li className="page-item">
-          <span className="page-link" href="#">Певчие птицы</span>
+        <li className="page-item disabled">
+          <span className="page-link"  href="#">Певчие птицы</span>
         </li>
-        <li className="page-item">
-          <span className="page-link" href="#">Хищные птицы</span>
+        <li className="page-item disabled">
+          <span className="page-link " href="#">Хищные птицы</span>
         </li>
-        <li className="page-item">
-          <span className="page-link" href="#">Морские птицы</span>
+        <li className="page-item disabled">
+          <span className="page-link " href="#">Морские птицы</span>
         </li>
       </ul>
     </div>

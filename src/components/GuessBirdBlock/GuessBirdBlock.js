@@ -3,10 +3,13 @@ import './GuessBirdBlock.css';
 
 const GuessBirdBlock = () => {
   return (
-    <div class="jumbotron guessing-bird-block">
-      <img src="https://birds-quiz.netlify.com/static/media/bird.06a46938.jpg" alt="bird_image"/>
-      <div>
-        <h1 class="display-3">***</h1>
+    <div className="jumbotron guessing-bird-block">
+      <img
+      className="guessing-bird-image"
+      src="https://birds-quiz.netlify.com/static/media/bird.06a46938.jpg"
+      alt="bird_image"/>
+      <div className="guessing-bird-info">
+        <h3 className="display-3">***</h3>
         <audio controls/>
       </div>
     </div>
