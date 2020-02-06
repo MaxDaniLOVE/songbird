@@ -45,7 +45,8 @@ export default class App extends Component{
         birdsData: newBirdsData,
         randomBird: randomBird(),
         isGuessed: false,
-        counter: newCounter
+        counter: newCounter,
+        displayedBird: {}
       }
     })
   }
