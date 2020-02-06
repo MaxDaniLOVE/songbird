@@ -13,7 +13,7 @@ export default class App extends Component{
   state = {
     score: 0,
     counter: 0,
-    displayedBird: null,
+    displayedBird: {},
     birdsData: birdsData[0],
     randomBird: randomBird(),
     isGuessed: false

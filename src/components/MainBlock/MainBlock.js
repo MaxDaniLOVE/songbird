@@ -5,7 +5,7 @@ import './MainBlock.scss';
 export default class MainBlock extends Component {
   state = {
     birdsList: [],
-    displayedBird: null,
+    displayedBird: {},
   }
 
   componentDidMount() {
@@ -13,7 +13,8 @@ export default class MainBlock extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.displayedBird !== this.props.displayedBird) {
+    if (prevProps.birdsList[0].name !== this.props.birdsList[0].name || 
+      prevProps.displayedBird !== this.props.displayedBird) {
       this.updateInfo();
       setTimeout(() => {
         this.refs.audio.pause(); // stops audio and update source when recieve new props
@@ -37,7 +38,7 @@ export default class MainBlock extends Component {
      return <MainBlockItem birdData={birdData} key={id} name={name} id={id} onSelectBird={onSelectBird}/>
     })
     let birdBlock;
-    if (!displayedBird) {
+    if (!Object.keys(displayedBird).length) { //check if displayedBird obj is empty
       birdBlock = <h3 className="select-bird">Выберите птицу из списка слева</h3>
     } else {
       const { audio, description, image, name, species } = displayedBird
