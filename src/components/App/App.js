@@ -19,11 +19,20 @@ export default class App extends Component{
   }
 
   onSelectBird = (id) => {
-    this.setState(({ birdsData }) =>{
-      const idx = birdsData.findIndex((el) => el.id === id)
-      const displayedBird = birdsData[idx]
-      return {
-        displayedBird
+    this.setState(({ birdsData, randomBird }) =>{
+      const idx = birdsData.findIndex((el) => el.id === id);
+      const randomBirdId = birdsData[randomBird].id;
+      console.log(randomBirdId);
+      const displayedBird = birdsData[idx];
+      if (displayedBird.id === randomBirdId) {
+        return {
+          displayedBird,
+          isGuessed: true
+        }
+      } else {
+        return {
+          displayedBird
+        }
       }
     })
   }

@@ -4,6 +4,12 @@ import './GuessBirdBlock.scss';
 export default class GuessBirdBlock extends Component {
   state = {};
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.isGuessed !== this.props.isGuessed) {
+      this.updateInfo()
+    }
+  }
+  
   componentDidMount() {
     this.updateInfo()
   }  
