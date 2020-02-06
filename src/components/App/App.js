@@ -5,6 +5,7 @@ import GuessBirdBlock from '../GuessBirdBlock';
 import MainBlock from '../MainBlock';
 import birdsData from '../../services/birdsData';
 import randomBird from '../../utils/randomBird';
+import NextStageBtn from '../NextStageBtn';
 
 import './App.css';
 
@@ -22,7 +23,6 @@ export default class App extends Component{
     this.setState(({ birdsData, randomBird }) =>{
       const idx = birdsData.findIndex((el) => el.id === id);
       const randomBirdId = birdsData[randomBird].id;
-      console.log(randomBirdId);
       const displayedBird = birdsData[idx];
       if (displayedBird.id === randomBirdId) {
         return {
@@ -33,6 +33,19 @@ export default class App extends Component{
         return {
           displayedBird
         }
+      }
+    })
+  }
+
+  onNextBtnClick = () => {
+    this.setState(({counter}) => {
+      const newCounter = counter + 1;
+      const newBirdsData = birdsData[newCounter]
+      return {
+        birdsData: newBirdsData,
+        randomBird: randomBird(),
+        isGuessed: false,
+        counter: newCounter
       }
     })
   }
@@ -48,7 +61,9 @@ export default class App extends Component{
           onSelectBird={this.onSelectBird}
           birdsList={birdsData}
           displayedBird={displayedBird}
+          onNextBtnClick={this.onNextBtnClick}
         />
+        <NextStageBtn isGuessed={isGuessed} onNextBtnClick={this.onNextBtnClick}/>
       </div>
     );
   }
