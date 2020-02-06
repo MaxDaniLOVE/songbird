@@ -6,7 +6,6 @@ export default class GuessBirdBlock extends Component {
 
   componentDidUpdate(prevProps) {
     if (prevProps.isGuessed !== this.props.isGuessed) {
-      console.log('upd');
       this.updateInfo()
     }
   }

@@ -31,7 +31,7 @@ export default class MainBlock extends Component {
 
   render() {
     const { birdsList, displayedBird} = this.state;
-    const { onSelectBird, onNextBtnClick } = this.props;
+    const { onSelectBird } = this.props;
     const list = birdsList.map(({name, id}) => {
       return <li
         key={id}
