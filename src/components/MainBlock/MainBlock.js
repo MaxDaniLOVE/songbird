@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MainBlockItem from '../MainBlockItem';
 import './MainBlock.scss';
 
 export default class MainBlock extends Component {
@@ -31,15 +32,9 @@ export default class MainBlock extends Component {
 
   render() {
     const { birdsList, displayedBird} = this.state;
-    const { onSelectBird } = this.props;
+    const { onSelectBird, birdData } = this.props;
     const list = birdsList.map(({name, id}) => {
-      return <li
-        key={id}
-        className="list-group-item bird-list-item"
-        onClick={() => onSelectBird(id)}
-        >
-          {name}
-        </li>
+     return <MainBlockItem birdData={birdData} key={id} name={name} id={id} onSelectBird={onSelectBird}/>
     })
     let birdBlock;
     if (!displayedBird) {
