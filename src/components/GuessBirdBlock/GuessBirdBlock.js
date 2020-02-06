@@ -8,6 +8,12 @@ export default class GuessBirdBlock extends Component {
     if (prevProps.isGuessed !== this.props.isGuessed) {
       this.updateInfo()
     }
+    if (prevProps.birdData.id !== this.props.birdData.id) {
+      setTimeout(() => {
+        this.refs.audio.pause(); // stops audio and update source when recieve new props
+        this.refs.audio.load();
+      }, 0);
+    }
   }
   
   componentDidMount() {
@@ -44,7 +50,7 @@ export default class GuessBirdBlock extends Component {
         alt="bird_image"/>
         <div className="guessing-bird-info">
           <h3 className="display-3">{birdsName}</h3>
-          <audio controls>
+          <audio controls ref="audio">
             <source src={audio}/>
           </audio>
         </div>
