@@ -4,6 +4,7 @@ import TopPanel from '../TopPanel';
 import GuessBirdBlock from '../GuessBirdBlock';
 import MainBlock from '../MainBlock';
 import birdsData from '../../services/birdsData';
+import randomBird from '../../utils/randomBird';
 
 import './App.css';
 
@@ -12,7 +13,9 @@ export default class App extends Component{
     score: 0,
     counter: 0,
     displayedBird: null,
-    birdsData: birdsData[0]
+    birdsData: birdsData[0],
+    randomBird: randomBird(),
+    isGuessed: false
   }
 
   onSelectBird = (id) => {
@@ -26,12 +29,12 @@ export default class App extends Component{
   }
 
   render() {
-    const { score, birdsData, displayedBird } = this.state
+    const { score, birdsData, displayedBird, isGuessed, randomBird } = this.state
     return (
       <div className="container">
         <Header score={score}/>
         <TopPanel />
-        <GuessBirdBlock />
+        <GuessBirdBlock isGuessed={isGuessed} birdData={birdsData[randomBird]}/>
         <MainBlock
           onSelectBird={this.onSelectBird}
           birdsList={birdsData}
