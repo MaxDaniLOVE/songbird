@@ -10,7 +10,7 @@ import NextStageBtn from '../NextStageBtn';
 import './App.css';
 
 export default class App extends Component{
-  state = {
+  initialState = {
     score: 0,
     counter: 0,
     displayedBird: {},
@@ -18,6 +18,7 @@ export default class App extends Component{
     randomBird: randomBird(),
     isGuessed: false
   }
+  state = {...this.initialState}
 
   onSelectBird = (id) => {
     this.setState(({ birdsData, randomBird }) =>{
@@ -40,13 +41,19 @@ export default class App extends Component{
   onNextBtnClick = () => {
     this.setState(({counter}) => {
       const newCounter = counter + 1;
-      const newBirdsData = birdsData[newCounter]
-      return {
-        birdsData: newBirdsData,
-        randomBird: randomBird(),
-        isGuessed: false,
-        counter: newCounter,
-        displayedBird: {}
+      if (newCounter === 6) {
+        this.setState({
+          ...this.initialState,
+        })
+      } else {
+        const newBirdsData = birdsData[newCounter]
+        return {
+          birdsData: newBirdsData,
+          randomBird: randomBird(),
+          isGuessed: false,
+          counter: newCounter,
+          displayedBird: {}
+        }
       }
     })
   }
