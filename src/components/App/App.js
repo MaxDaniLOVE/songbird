@@ -12,6 +12,7 @@ import './App.css';
 export default class App extends Component{
   initialState = {
     score: 0,
+    scoreCounter: 0,
     counter: 0,
     displayedBird: {},
     birdsData: birdsData[0],
@@ -21,18 +22,23 @@ export default class App extends Component{
   state = {...this.initialState}
 
   onSelectBird = (id) => {
-    this.setState(({ birdsData, randomBird }) =>{
+    this.setState(({ birdsData, randomBird, score, scoreCounter }) =>{
       const idx = birdsData.findIndex((el) => el.id === id);
       const randomBirdId = birdsData[randomBird].id;
       const displayedBird = birdsData[idx];
+      const newScoreCounter = scoreCounter + 1;
+      const newScore = score + (6 - newScoreCounter);
       if (displayedBird.id === randomBirdId) {
         return {
+          scoreCounter: 0,
           displayedBird,
-          isGuessed: true
+          isGuessed: true,
+          score: newScore
         }
       } else {
         return {
-          displayedBird
+          displayedBird,
+          scoreCounter: newScoreCounter
         }
       }
     })
@@ -52,7 +58,8 @@ export default class App extends Component{
           randomBird: randomBird(),
           isGuessed: false,
           counter: newCounter,
-          displayedBird: {}
+          displayedBird: {},
+          scoreCounter: 0,
         }
       }
     })
