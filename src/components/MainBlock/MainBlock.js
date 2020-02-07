@@ -33,9 +33,15 @@ export default class MainBlock extends Component {
 
   render() {
     const { birdsList, displayedBird} = this.state;
-    const { onSelectBird, birdData } = this.props;
+    const { onSelectBird, birdData, isGuessed } = this.props;
     const list = birdsList.map(({name, id}) => {
-     return <MainBlockItem birdData={birdData} key={id} name={name} id={id} onSelectBird={onSelectBird}/>
+     return <MainBlockItem
+              birdData={birdData}
+              key={id}
+              name={name}
+              id={id}
+              onSelectBird={onSelectBird}
+              isGuessed={isGuessed}/>
     })
     let birdBlock;
     if (!Object.keys(displayedBird).length) { //check if displayedBird obj is empty

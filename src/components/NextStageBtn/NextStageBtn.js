@@ -4,11 +4,11 @@ const NextStageBtn = ({onNextBtnClick, isGuessed}) => {
   return (
     <button
       type="button"
-      className="btn btn-primary next-btn"
+      className="btn btn-danger next-btn"
       onClick={onNextBtnClick}
       disabled={!isGuessed}
     >
-      Next
+      Следующий уровень
     </button>
   );
 }

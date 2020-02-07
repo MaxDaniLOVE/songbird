@@ -71,6 +71,7 @@ export default class App extends Component{
           displayedBird={displayedBird}
           onNextBtnClick={this.onNextBtnClick}
           birdData={birdsData[randomBird]}
+          isGuessed={isGuessed}
         />
         <NextStageBtn isGuessed={isGuessed} onNextBtnClick={this.onNextBtnClick}/>
       </div>

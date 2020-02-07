@@ -13,16 +13,13 @@ export class MainBlockItem extends Component {
   }
   
   changeColor(id) {
-    const { birdData } = this.props;
-    let newState;
-    if (birdData.id === id) {
-      newState = true
-    } else {
-      newState = false
-    }
-    this.setState({
-      isRight: newState
-    })
+    const { birdData, isGuessed } = this.props;
+    if (!isGuessed) {
+      const newState = birdData.id === id ? true : false
+      this.setState({
+        isRight: newState
+      })
+    }    
   }
   render() {
     const { name, id, onSelectBird } = this.props; 

@@ -14,7 +14,7 @@ const TopPanel = ({counter}) => {
     const className = counter === idx ? 'page-item active' : 'page-item disabled';
     return (
       <li key={idx + 1} className={className}>
-        <span className="page-link" href="#">{species}</span>
+        <span className="page-link stage-name" href="#">{species}</span>
       </li>
     )
   })
