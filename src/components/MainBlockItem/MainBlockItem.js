@@ -25,14 +25,11 @@ export class MainBlockItem extends Component {
     })
   }
   render() {
-    const { name, id, onSelectBird } = this.props;
+    const { name, id, onSelectBird } = this.props; 
     const { isRight } = this.state;
-    let newClassName;
-    if (isRight) {
-      newClassName = 'list-group-item bird-list-item right';
-    } else {
-      newClassName = 'list-group-item bird-list-item wrong';
-    }
+    let newClassName = isRight
+      ? 'list-group-item bird-list-item right' // set this className if it's right answer
+      : 'list-group-item bird-list-item wrong' // set this className if it's wrong answer
     if (isRight == null) {
       newClassName = 'list-group-item bird-list-item';
     }
