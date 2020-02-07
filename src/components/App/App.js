@@ -52,11 +52,11 @@ export default class App extends Component{
   }
 
   render() {
-    const { score, birdsData, displayedBird, isGuessed, randomBird } = this.state
+    const { score, birdsData, displayedBird, isGuessed, randomBird, counter } = this.state;
     return (
       <div className="container">
         <Header score={score}/>
-        <TopPanel />
+        <TopPanel counter={counter}/>
         <GuessBirdBlock isGuessed={isGuessed} birdData={birdsData[randomBird]}/>
         <MainBlock
           onSelectBird={this.onSelectBird}

@@ -1,28 +1,27 @@
 import React from 'react';
 import './TopPanel.css';
 
-const TopPanel = () => {
+const TopPanel = ({counter}) => {
+  const stages = [
+    'Разминка',
+    'Воробьиные',
+    'Лесные птицы',
+    'Певчие птицы',
+    'Хищные птицы',
+    'Морские птицы'
+  ]
+  const StageBlocks = stages.map((species, idx) => {
+    const className = counter === idx ? 'page-item active' : 'page-item disabled';
+    return (
+      <li key={idx + 1} className={className}>
+        <span className="page-link" href="#">{species}</span>
+      </li>
+    )
+  })
   return (
     <div>
       <ul className="pagination pagination-lg">
-        <li className="page-item active">
-          <span className="page-link" href="#">Разминка</span>
-        </li>
-        <li className="page-item disabled">
-          <span className="page-link " href="#">Воробьиные</span>
-        </li>
-        <li className="page-item disabled">
-          <span className="page-link " href="#">Лесные птицы</span>
-        </li>
-        <li className="page-item disabled">
-          <span className="page-link"  href="#">Певчие птицы</span>
-        </li>
-        <li className="page-item disabled">
-          <span className="page-link " href="#">Хищные птицы</span>
-        </li>
-        <li className="page-item disabled">
-          <span className="page-link " href="#">Морские птицы</span>
-        </li>
+        {StageBlocks}
       </ul>
     </div>
   );
