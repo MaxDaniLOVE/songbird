@@ -6,7 +6,7 @@ import MainBlock from '../MainBlock';
 import birdsData from '../../services/birdsData';
 import randomBird from '../../utils/randomBird';
 import NextStageBtn from '../NextStageBtn';
-
+import MainPage from '../MainPage';
 import './App.css';
 
 export default class App extends Component{
@@ -69,18 +69,16 @@ export default class App extends Component{
     const { score, birdsData, displayedBird, isGuessed, randomBird, counter } = this.state;
     return (
       <div className="container">
-        <Header score={score}/>
-        <TopPanel counter={counter}/>
-        <GuessBirdBlock isGuessed={isGuessed} birdData={birdsData[randomBird]}/>
-        <MainBlock
-          onSelectBird={this.onSelectBird}
-          birdsList={birdsData}
-          displayedBird={displayedBird}
-          onNextBtnClick={this.onNextBtnClick}
-          birdData={birdsData[randomBird]}
-          isGuessed={isGuessed}
+        <MainPage
+        score={score}
+        counter={counter} 
+        isGuessed={isGuessed}
+        birdData={birdsData[randomBird]}
+        onSelectBird={this.onSelectBird}
+        birdsList={birdsData}
+        displayedBird={displayedBird}
+        onNextBtnClick={this.onNextBtnClick}
         />
-        <NextStageBtn isGuessed={isGuessed} onNextBtnClick={this.onNextBtnClick}/>
       </div>
     );
   }
