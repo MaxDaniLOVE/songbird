@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
-import Header from '../Header'
-import TopPanel from '../TopPanel';
-import GuessBirdBlock from '../GuessBirdBlock';
-import MainBlock from '../MainBlock';
 import birdsData from '../../services/birdsData';
 import randomBird from '../../utils/randomBird';
-import NextStageBtn from '../NextStageBtn';
 import MainPage from '../MainPage';
+import GameOver from '../GameOver';
 import './App.css';
 
 export default class App extends Component{
@@ -17,7 +13,9 @@ export default class App extends Component{
     displayedBird: {},
     birdsData: birdsData[0],
     randomBird: randomBird(),
-    isGuessed: false
+    isGuessed: false,
+    isOver: false,
+    finalScore: 0
   }
   state = {...this.initialState}
 
@@ -45,11 +43,13 @@ export default class App extends Component{
   }
 
   onNextBtnClick = () => {
-    this.setState(({counter}) => {
+    this.setState(({counter, score}) => {
       const newCounter = counter + 1;
       if (newCounter === 6) {
         this.setState({
           ...this.initialState,
+          isOver: true,
+          finalScore: score
         })
       } else {
         const newBirdsData = birdsData[newCounter]
@@ -65,20 +65,29 @@ export default class App extends Component{
     })
   }
 
+  onRefreshState = () => {
+    this.setState({
+      ...this.initialState,
+    })
+  }
+
   render() {
-    const { score, birdsData, displayedBird, isGuessed, randomBird, counter } = this.state;
+    const { score, birdsData, displayedBird, isGuessed, randomBird, counter, isOver, finalScore } = this.state;
+    const displayedBlock = isOver ?
+    <GameOver score={finalScore} onRefreshState={this.onRefreshState}/> : 
+    <MainPage
+      score={score}
+      counter={counter} 
+      isGuessed={isGuessed}
+      birdData={birdsData[randomBird]}
+      onSelectBird={this.onSelectBird}
+      birdsList={birdsData}
+      displayedBird={displayedBird}
+      onNextBtnClick={this.onNextBtnClick}
+    />
     return (
       <div className="container">
-        <MainPage
-        score={score}
-        counter={counter} 
-        isGuessed={isGuessed}
-        birdData={birdsData[randomBird]}
-        onSelectBird={this.onSelectBird}
-        birdsList={birdsData}
-        displayedBird={displayedBird}
-        onNextBtnClick={this.onNextBtnClick}
-        />
+       {displayedBlock}
       </div>
     );
   }
