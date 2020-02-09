@@ -16,12 +16,13 @@ export default class MainBlock extends Component {
     if (prevProps.birdsList[0].name !== this.props.birdsList[0].name || 
       prevProps.displayedBird !== this.props.displayedBird) {
       this.updateInfo();
-      setTimeout(() => {
-        this.refs.audio.pause(); // stops audio and update source when recieve new props
-        this.refs.audio.load();
-      }, 0);
     }
-  } 
+  }
+
+  componentWillUnmount() {
+    this.refs.audio.pause();
+    this.refs.audio.load();
+  }
 
   updateInfo() {
     const { birdsList, displayedBird} = this.props;
