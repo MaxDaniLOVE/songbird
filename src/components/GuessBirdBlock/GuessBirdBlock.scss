@@ -12,3 +12,12 @@
 .guessing-bird-info{
   flex-grow: 0.95;
 }
+@media only screen and (max-width: 600px) {
+  .guessing-bird-block{
+    display: flex;
+    flex-direction: column;
+  }
+  audio{
+    width: 100%;
+  }
+}

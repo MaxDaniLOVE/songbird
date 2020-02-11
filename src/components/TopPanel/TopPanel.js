@@ -1,5 +1,5 @@
 import React from 'react';
-import './TopPanel.css';
+import './TopPanel.scss';
 
 const TopPanel = ({counter}) => {
   const stages = [
@@ -11,7 +11,9 @@ const TopPanel = ({counter}) => {
     'Морские птицы'
   ]
   const StageBlocks = stages.map((species, idx) => {
-    const className = counter === idx ? 'page-item active' : 'page-item disabled';
+    const className = counter === idx
+      ? 'page-item active top-panel_item'
+      : 'page-item disabled top-panel_item';
     return (
       <li key={idx + 1} className={className}>
         <span className="page-link stage-name" href="#">{species}</span>
@@ -20,7 +22,7 @@ const TopPanel = ({counter}) => {
   })
   return (
     <div>
-      <ul className="pagination pagination-lg">
+      <ul className="pagination pagination-lg top-panel">
         {StageBlocks}
       </ul>
     </div>

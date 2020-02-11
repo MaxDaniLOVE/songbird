@@ -1,0 +1,33 @@
+.page-item{
+  flex-grow: 1;
+  margin-bottom: 1rem;
+  
+}
+.stage-name{
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+  line-height: 0.5 !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .page-item:last-child .page-link {
+    border-top-right-radius: 0 !important;
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+  }
+  .page-item:first-child .page-link {
+    border-bottom-left-radius: 0 !important;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+  }
+  .top-panel{
+    display: flex;
+    flex-direction: column;
+    &_item{
+      margin-bottom: 0;
+    }
+  }
+  .top-panel:nth-child(6){
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+}
