@@ -1,11 +1,10 @@
 .page-item{
   flex-grow: 1;
   margin-bottom: 1rem;
-  
 }
 .stage-name{
-  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
   line-height: 0.5 !important;
+  font-size: 1rem !important;
 }
 
 @media only screen and (max-width: 600px) {
@@ -29,5 +28,36 @@
   .top-panel:nth-child(6){
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+  }
+}
+@media only screen and (max-width: 1024px){
+  .top-panel{
+    flex-wrap: wrap;
+    &_item:nth-child(1){
+      margin-bottom: 0;
+      .stage-name{
+        border-bottom-left-radius: 0 !important;
+      }
+    }
+    &_item:nth-child(2){
+      margin-bottom: 0;
+    }
+    &_item:nth-child(3){
+      margin-bottom: 0;
+    }
+    &_item:nth-child(4){
+      margin-bottom: 0;
+    }
+    &_item:nth-child(5){
+      margin-bottom: 0;
+    }
+    &_item:nth-child(5){
+      margin-bottom: 0;
+    }
+    &_item:nth-child(6){
+      .stage-name{
+        border-top-right-radius: 0 !important;
+      }
+    }
   }
 }

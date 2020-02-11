@@ -6,16 +6,25 @@
   box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.75);
 }
 .guessing-bird-image{
-  height: 10rem;
+  height: 160px;
+  width: 210px;
   border-radius: 3px;
 }
 .guessing-bird-info{
   flex-grow: 0.95;
 }
+.display-3{
+  font-size: 3rem;
+}
 @media only screen and (max-width: 600px) {
+  .guessing-bird-info{
+    margin-top: 5%;
+    width: 85%
+  }
   .guessing-bird-block{
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   audio{
     width: 100%;

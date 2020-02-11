@@ -15,14 +15,17 @@
   background-color: #EB6864;
   color: #fff;
 }
-.bird-list-item:hover {
-  cursor: pointer;
-}
-.bird-list-item:nth-child(1){
-  border-top-right-radius: 0;
-}
-.bird-list-item:nth-child(5){
-  border-bottom-right-radius: 0;
+.bird-list-item{
+  height: 20%;
+  &:hover {
+    cursor: pointer;
+  }
+  &:nth-child(1){
+    border-top-right-radius: 0;
+  }
+  &:nth-child(6){
+    border-bottom-right-radius: 0;
+  }
 }
 .bird-card{
   width: 70%;
@@ -44,8 +47,8 @@
   padding: 1rem;
 }
 .selected-bird_image{
-  height: 220px;
-  width: 180px;
+  height: 160px;
+  width: 210px;
 }
 .card-body{
  padding: 0.75rem;
@@ -62,13 +65,24 @@
   }
   .bird-card{
     width: 100%;
+    .card-header{
+      margin-top: 5%;
+      border-top: 0;
+      background: rgb(255,255,255);
+background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(189,189,189,1) 100%, rgba(248,248,248,1) 100%);
+    }
     .card-container{
       flex-direction: column;
     }
   }
   .selected-bird_image{
-    margin-top: 5%;
+    margin-top: 15px;
     height: 10rem;
+  }  
+}
+@media only screen and (max-width: 980px) {
+  .card-container{
+    padding-top: 5%;
+    flex-direction: column;
   }
-      
 }
