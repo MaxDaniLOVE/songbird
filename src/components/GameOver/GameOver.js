@@ -4,24 +4,27 @@ const GameOver = ({score, onRefreshState}) => {
   const congrats = score === 30 
     ? 'Поздравляем! Вы удостоились звания главного петушка! Это многого стоит!'
     : 'Это неплохой результат но вам есть к чему стремиться!'
-  if (score === 30) {
-    
-  } else {
-    
+  const btn = () => {
+    if (score === 30 ) {
+      return null;
+    } else {
+      return (
+        <button
+          type="button"
+          className="btn btn-danger next-btn"
+          onClick={onRefreshState}
+        >
+          Попробовать еще раз!
+        </button>
+      )
+    }
   }
   return (
     <React.Fragment>
       <h3>{score}/30</h3>
       <h1>{congrats}</h1>
-      <button
-        type="button"
-        className="btn btn-danger next-btn"
-        onClick={onRefreshState}
-      >
-        Попробовать еще раз!
-      </button>
+      {btn()}
     </React.Fragment>
-    
   )
 }
 
