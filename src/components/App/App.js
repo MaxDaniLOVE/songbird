@@ -20,12 +20,15 @@ export default class App extends Component{
   state = {...this.initialState}
 
   onSelectBird = (id) => {
-    this.setState(({ birdsData, randomBird, score, scoreCounter }) =>{
+    this.setState(({ birdsData, randomBird, score, scoreCounter,isGuessed }) =>{
       const idx = birdsData.findIndex((el) => el.id === id);
       const randomBirdId = birdsData[randomBird].id;
       const displayedBird = birdsData[idx];
       const newScoreCounter = scoreCounter + 1;
       const newScore = score + (6 - newScoreCounter);
+      if (isGuessed) {
+        return {displayedBird}
+      }
       if (displayedBird.id === randomBirdId) {
         return {
           scoreCounter: 0,

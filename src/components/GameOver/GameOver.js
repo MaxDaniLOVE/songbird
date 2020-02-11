@@ -3,7 +3,7 @@ import React from 'react';
 const GameOver = ({score, onRefreshState}) => {
   const congrats = score === 30 
     ? 'Поздравляем! Вы удостоились звания главного петушка! Это многого стоит!'
-    : 'Это неплохой результат но вам есть к чему стремиться!'
+    : 'Это неплохой результат, но вам есть к чему стремиться!'
   const btn = () => {
     if (score === 30 ) {
       return null;
