@@ -16,6 +16,10 @@ export default class MainBlock extends Component {
     if (prevProps.birdsList[0].name !== this.props.birdsList[0].name || 
       prevProps.displayedBird !== this.props.displayedBird) {
       this.updateInfo();
+      if (typeof this.refs.audio !== 'undefined') {
+        this.refs.audio.pause();
+        this.refs.audio.load();
+      }
     }
   }
 
