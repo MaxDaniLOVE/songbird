@@ -32,8 +32,8 @@ export default class GuessBirdBlock extends Component {
   }
 
   render() {
-    
     const { isGuessed, audio, image, name} = this.state;
+    console.log(name);
     let birdsName, birdsImage;
     if (!isGuessed) {
       birdsName = '*******'
