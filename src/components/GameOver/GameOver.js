@@ -21,7 +21,7 @@ const GameOver = ({score, onRefreshState}) => {
   }
   return (
     <React.Fragment>
-      <h3 style={{marginTop: '35%'}}>{score}/30</h3>
+      <h3 style={{marginTop: '30%'}}>{score}/30</h3>
       <h1>{congrats}</h1>
       {btn()}
     </React.Fragment>
