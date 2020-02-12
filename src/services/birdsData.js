@@ -2,11 +2,11 @@ const birdsData = [
   [       
     {
       id: 1,
-      name: 'Ворон',
-      species: 'Corvus corax',
-      description: 'Ворон – крупная птица. Длина тела достигает 70 сантиметров, размах крыльев – до полутора метров. Вороны населяют окрестности Тауэра. В Англии бытует поверье, что в день, когда черные вороны улетят от Тауэра, монархия рухнет.',
-      image: 'https://live.staticflickr.com//65535//49298804222_474cfe8682.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/XIQVMQVUPP/XC518684-Grands%20corbeaux%2009012020%20Suzon.mp3'
+      name: 'Рябчик',
+      species: 'Tetrastes bonasia',
+      description: 'Небольшая, размером с галку, пухлая птица с непропорционально маленькой головой и коротким клювом. Большую часть времени проводит на земле, где ведёт скрытный образ жизни. При приближении человека убегает либо затаивается. Застигнутый врасплох, улетает на 40—80 м и садится на ветку хвойного дерева поближе к стволу на высоте не менее 5—7 м, пытаясь слиться с ним.',
+      image: 'https://live.staticflickr.com//65535//49184013111_529af96c03.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/WDMGSYQBRL/XC234610-Default%20Project.mp3'
     },
     {
       id: 2,
@@ -26,11 +26,11 @@ const birdsData = [
     },
     {
       id: 4,
-      name: 'Козодой',
-      species: 'Caprimulgus europaeus',
-      description: 'Козодой – неприметная птица, известная благодаря своему голосу. Песня козодоя звучит как монотонная трель похожая на тарахтение мотоцикла. Такое дребезжание слышно от заката до рассвета, его тональность, частота и громкость изменяются. ',
-      image: 'https://live.staticflickr.com/65535/48456345286_dbc8530027.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/VOLIQOYWKG/XC486956-190623_22.37h_nachtzwaluw_rechte%20heide_zang_ad%20_2ex_gezien_.mp3'
+      name: 'Длиннохвостая неясыть',
+      species: 'Strix uralensis',
+      description: 'Лающее довольно высокое «хау... хау... хау». Самка, помимо «лая», иногда издает более высокий звук «вак-вак». Призывный крик длиннохвостой неясыти — низкое протяжное гудение и ещё более низкий двойной звук. Песня самца воспринимается как повторение слогов «уув-ув-ув», самки — «ыы-ыу-ыу-ыу».',
+      image: 'https://live.staticflickr.com//65535//49517052056_f48aa2e9d5.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/ACYAQZYZTA/XC324673-samiec%20i%20m%C5%82ody.mp3'
     },
     {
       id: 5,
@@ -42,16 +42,24 @@ const birdsData = [
     },
     {
       id: 6,
-      name: 'Синица',
-      species: 'Parus major',
-      description: 'В щебетании синиц различают более 40 различных звуковых сочетаний. Поют они практически круглый год, немного затихая только зимой. Синицы настоящие санитары леса. Одна пара синиц в период гнездования оберегает от вредителей десятки деревьев.',
-      image: 'https://live.staticflickr.com//65535//49366042493_c48c81d58d.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/RFGQDPLDEC/XC518417-Kj%C3%B8ttmeis%20XC%20Helg%C3%B8ya%20Elias%20A.%20Ryberg20200108133922_079.mp3'
+      name: 'Князёк',
+      species: 'Cyanistes cyanus',
+      description: 'Голос очень похож на голос лазоревки. Основные позывки: высокое «тирр...» — одиночные или сериями, комбинированные фразы «сиии-сиии-сиии-ти-ти-ти...», «черр-пинь». Песня представляет собой длинные фразы из повторяющихся коротких свистов «ции-ции-ции-тата-татата...» или «тюви-тии».',
+      image: 'https://live.staticflickr.com//65535//47949427423_7f61bfcfbd.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/CVLRXNQXVL/XC477533-lasurmeise%20ruf.mp3'
     }
   ],
   [
     {
       id: 1,
+      name: 'Трясогузка',
+      species: 'Epthianura tricolor',
+      description: 'Трясогузки — перелётные птицы. Большинство трясогузок держится возле воды отдельными семьями или небольшими стайками; гнездятся трясогузки на земле или в дуплах. В отличие от большинства мелких птиц по земле передвигается не прыжками, а бегом.',
+      image: 'https://live.staticflickr.com//65535//49143691138_5742f4896a.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/TTIFFYIFJG/crimson_chat_oscillation.mp3'
+    },
+    {
+      id: 2,
       name: 'Воробей',
       species: 'Passer domesticus',
       description: 'Воробьи являются самыми известными и узнаваемыми пернатыми. Их легко узнать по пестрому оперению и задорному чириканью. Воробьи относятся к синатропному виду — они селятся поблизости к человеческому жилищу.',
@@ -59,20 +67,12 @@ const birdsData = [
       audio: 'https://www.xeno-canto.org/sounds/uploaded/CXFHOPIVAS/XC503224-191020_0134.mp3'
     },
     {
-      id: 2,
-      name: 'Грач',
-      species: 'Corvus frugilegus',
-      description: 'Грачи очень умные и сообразительные птицы. С помощью клюва они создают и используют простейшие орудия. У грачей развит рефлекс на звуки трактора. Услышав «тарахтение», они летят на звук – трактор пашет землю, значит, в этом месте много корма.',
-      image: 'https://live.staticflickr.com//65535//49347123322_291c86b016.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/RLRHCUIPIY/XC512540-gawron%20Suble%2019.12.19%20%2012.35.mp3'
-    },
-    {
       id: 3,
-      name: 'Галка',
-      species: 'Coloeus monedula',
-      description: 'Слово «галка» произошло из старославянского языка и переводится как «чёрный». Этим словом часто называют воронов или других черных птиц. Латинское название галки «monedula» связывают со словами монета за любовь птицы к блестящим и ярким вещам.',
-      image: 'https://live.staticflickr.com//65535//49237149586_993cf685c5.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/GYAUIPUVNM/XC510498-Coloeus%20monedula_2019.11.13_11.55_01.mp3'
+      name: 'Фуди',
+      species: 'Foudia',
+      description: 'Род птиц из семейства Ткачиковые. Распространены на Мадагаскаре, Коморских, Сейшельских и Маскаренских островах. Населяют леса и открытые ландшафты. В кладке до пяти яиц.',
+      image: 'https://live.staticflickr.com//65535//49502482258_6f6bb7920e.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/UDDNOHEKEN/XC305046-Fody%2C%20Madagascar%20%284%29%3B%20La%20Roche%20Ecrite%2028-02-2016%201430.mp3'
     },
     {
       id: 4,
@@ -84,11 +84,11 @@ const birdsData = [
     },
     {
       id: 5,
-      name: 'Сорока',
-      species: 'Pica pica',
-      description: 'Сорока очень трудолюбивая птица. Она строит до восьми гнёзд, а потом выбирает из них самое лучшее. Вход в гнездо сорок всегда обращен на юг, чтобы в жилище было теплее. Сороки являются единственными птицами, которые узнают себя в зеркале.',
-      image: 'https://live.staticflickr.com//65535//49360363066_ff02bb6a73.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/GYAUIPUVNM/XC500868-Pica%20pica2019.08.23_09.18_02.mp3'
+      name: 'Красноногая вдовушка',
+      species: 'Vidua chalybeata',
+      description: 'От других членов рода Vidua представителей вида можно отличить по цвету клюва и ног, оттенку брачного оперения самца, песне, и, в меньшей степени, оперению птенцов и узору на зобе. В зависимости от популяции клюв может быть красный или белый, есть также некоторые региональные отличия в тоне оперения самца.',
+      image: 'https://live.staticflickr.com//65535//49234213238_600f38f5ba.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/HMBDEWEZVS/XC522557-1%20Villag.mp3'
     },
     {
       id: 6,
@@ -102,11 +102,11 @@ const birdsData = [
   [
     {
       id: 1,
-      name: 'Зяблик',
-      species: 'Fringilla coelebs',
-      description: 'В дикой природе насчитывается 450 видов зябликов. Зимой зяблики ведут стайный образ жизни. Иногда в их семьях можно увидеть воробьев. Запевают зяблики весной, с наступлением брачного периода. Их пение – это заливистые многоминутные рулады.',
-      image: 'https://live.staticflickr.com/65535/49143150817_2d3a2f6c1e.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC512407-150622_03%20zi%C4%99ba%20%282%29.mp3'
+      name: 'Синица',
+      species: 'Parus major',
+      description: 'В щебетании синиц различают более 40 различных звуковых сочетаний. Поют они практически круглый год, немного затихая только зимой. Синицы настоящие санитары леса. Одна пара синиц в период гнездования оберегает от вредителей десятки деревьев.',
+      image: 'https://live.staticflickr.com//65535//49524976812_b9827113ce.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/RFGQDPLDEC/XC518417-Kj%C3%B8ttmeis%20XC%20Helg%C3%B8ya%20Elias%20A.%20Ryberg20200108133922_079.mp3'
     },
     {
       id: 2,
@@ -118,11 +118,11 @@ const birdsData = [
     },
     {
       id: 3,
-      name: 'Горлица',
-      species: 'Streptopelia turtur',
-      description: 'Горлица обитает в смешанных и широколиственных лесах, а также в городских парках и поселках. Птицы часто выбирают места жизни рядом с человеком и легко привыкают к людям. Благодаря мелодичному приятному пению горлиц часто разводят в домашних условиях.',
-      image: 'https://live.staticflickr.com/65535/48063004977_84252f9ceb.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC324106-Turkawka_Streptopelia_turtur_Poland_Jarek_Matusiak_2011625_07.mp3'
+      name: 'Кедровка',
+      species: 'Nucifraga caryocatactes',
+      description: 'Птица легко узнаётся по буроватому наряду с частыми крупными белыми пестринами, немного напоминающему зимнее оперение обыкновенного скворца: за такую расцветку японцы прозвали кедровку «звёздным вороном».',
+      image: 'https://live.staticflickr.com//65535//49493424902_2d440b672b.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/PTYTXQRLSZ/XC516305-RDBPARA-501_2020-11-03_09h17_SpottedNutcracker_calls.mp3'
     },
     {
       id: 4,
@@ -134,11 +134,11 @@ const birdsData = [
     },
     {
       id: 5,
-      name: 'Удод',
-      species: 'Upupa epops',
-      description: 'Удоды предпочитают жить на открытых ландшафтах с отдельными деревьями или рощами. Наиболее удобными для птицы являются лесостепь и саванна. Удод может выбирать места жительства рядом с человеком: пастбища, виноградники, фруктовые сады.',
-      image: 'https://live.staticflickr.com//65535//49226383598_6f8be86a06.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC477326-dudek%20%282%29.mp3'
+      name: 'Лазоревка',
+      species: 'Cyanistes caeruleus',
+      description: 'Маленькая синица компактного телосложения, при этом изящна, обладает серо-оливковой спиной и лимонно-жёлтым низом, со светлым брюшком, на котором бывает тёмная продольная полоса. На голове характерный рисунок: «щёки», затылок и лоб белые, «шапочка» голубая, «ошейник» и полоса через глаз чёрные. ',
+      image: 'https://live.staticflickr.com//65535//49524200917_2c0918a366.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/SDPCHKOHRH/XC526244-2019-10-23%20Cap%20Ferret%20Mesange%20bleue%20cris%20de%20vol.mp3'
     },
     {
       id: 6,
@@ -152,11 +152,11 @@ const birdsData = [
   [
     {
       id: 1,
-      name: 'Жаворонок',
-      species: 'Alauda arvensis',
-      description: 'Жаворонки — перелетные птицы. С начала сентября они отлетают на юг. Возвращаются они в начале марта, независимо от того, сошел снег или нет. По прилету жаворонков определяли наступление весны и пору, когда пора пахать землю.',
-      image: 'https://live.staticflickr.com/65535/47105096764_f751fba568.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC462158-Skowronek_Alauda_arvensis_Poland_Jarek_Matusiak_%20-006%20skowronek%20%282%29.mp3'
+      name: 'Певчий дрозд',
+      species: 'Turdus philomelos',
+      description: 'Дрозд — лучший певец из отряда воробьиных. Песня состоит только из красивых звучных свистов и коротких трелей. Чаще всего её можно услышать в утреннее и вечернее время. Поют дрозды в течении всего периода гнездования.',
+      image: 'https://live.staticflickr.com/65535/48979125763_e2534f54bd.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/BLMSIUFTFU/XC513326-190704_1146_TF-Glogow.mp3'
     },
     {
       id: 2,
@@ -168,11 +168,11 @@ const birdsData = [
     },
     {
       id: 3,
-      name: 'Скворец',
-      species: 'Sturnus vulgaris',
-      description: 'Скворцы - перелётные птицы. Синхронный перелет больших стай скворцов называется мурмурацией. Это красивое и завораживающее явление – множество птиц будто танцуют в воздухе, образуя замысловатые фигуры, которые уменьшаются и увеличиваются в небе.',
-      image: 'https://live.staticflickr.com/65535/49357593971_9509fe1d7c.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/GYAUIPUVNM/XC515519-2020.01.01_17.24_01.MP3'
+      name: 'Рябчик',
+      species: 'Tetrastes bonasia',
+      description: 'Небольшая, размером с галку, пухлая птица с непропорционально маленькой головой и коротким клювом. Большую часть времени проводит на земле, где ведёт скрытный образ жизни. При приближении человека убегает либо затаивается. Застигнутый врасплох, улетает на 40—80 м и садится на ветку хвойного дерева поближе к стволу на высоте не менее 5—7 м, пытаясь слиться с ним.',
+      image: 'https://live.staticflickr.com//65535//49184013111_529af96c03.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/WDMGSYQBRL/XC234610-Default%20Project.mp3'
     },
     {
       id: 4,
